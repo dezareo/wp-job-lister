@@ -51,13 +51,13 @@ function dez_register_post_type() {
 		'hierarchical'        => false,
 		'has_archive'         => true,
 		'query_var'           => true,
-		'capability_type'     => 'post',
+		'capability_type'     => 'page',
 		'map_meta_cap'        => true,
 		'rewrite'             => array(
 			'slug'            => 'jobs',
 			'with_front'      => true,
 			'pages'           => true,
-			'feeds'           => true
+			'feeds'           => false
 		),
 		'supports' => array(
 			'title',
