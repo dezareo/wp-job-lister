@@ -15,3 +15,5 @@ if ( ! defined ( 'ABSPATH' ) ) {
 }
 
 require_once ( plugin_dir_path(__FILE__) . 'wp-job-lister-cpt.php' );
+require_once ( plugin_dir_path(__FILE__) . 'wp-job-lister-render-admin.php' );
+require_once ( plugin_dir_path(__FILE__) . 'wp-job-lister-fields.php' );
