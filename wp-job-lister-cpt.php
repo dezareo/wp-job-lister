@@ -46,10 +46,7 @@ function dez_register_post_type() {
 			'feeds'           => false
 		),
 		'supports' => array(
-			'title',
-			'editor',
-			'author',
-			'custom-fields'
+			'title'
 		)
 	);
 
