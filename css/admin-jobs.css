@@ -8,6 +8,7 @@
 	float: left;
 	width: 25%;
 	font-weight: bold;
+	padding: 5px;
 }
 .meta-tr {
 	display: inline-block;
