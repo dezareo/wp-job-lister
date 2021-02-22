@@ -61,6 +61,22 @@ function dez_meta_callback( $post ) {
 		wp_editor( $content, $editor, $settings, );
 	?>
 	</div>
+	<div class="meta-row">
+			<div class="meta-th">
+                <label for="minimum-requirements" class="dez-row-title">Minimum Requirements</label>
+			</div>
+			<div class="meta-td">
+				<input type="text" name="minimum_requirements" class="dez-textarea" id="minimum-requirements" value="<?php if ( ! empty ($dez_stored_meta['minimum_requirements'] ) ) echo esc_attr( $dez_stored_meta['minimum_requirements'] [0] ); ?>" />
+			</div>
+	</div>
+	<div class="meta-row">
+			<div class="meta-th">
+                <label for="prefered-requirements" class="dez-row-title">Prefered Requirements</label>
+			</div>
+			<div class="meta-td">
+				<input type="text" name="prefered_requirements" class="dez-textarea" id="prefered-requirements" value="<?php if ( ! empty ($dez_stored_meta['prefered_requirements'] ) ) echo esc_attr( $dez_stored_meta['prefered_requirements'] [0] ); ?>" />
+			</div>
+	</div>
 <?php
 
 }
@@ -87,6 +103,12 @@ function dez_meta_save( $post_id ) {
 	}
 	if ( isset ( $_POST['principle_duties'] ) ) {
 		update_post_meta( $post_id, 'principle_duties', sanitize_text_field(  $_POST[ 'principle_duties' ] ) );
+	}
+	if ( isset ( $_POST['minimum_requirements'] ) ) {
+		update_post_meta( $post_id, 'minimum_requirements', sanitize_text_field(  $_POST[ 'minimum_requirements' ] ) );
+	}
+	if ( isset ( $_POST['prefered_requirements'] ) ) {
+		update_post_meta( $post_id, 'prefered_requirements', sanitize_text_field(  $_POST[ 'prefered_requirements' ] ) );
 	}
 }
 add_action( 'save_post', 'dez_meta_save' );
