@@ -22,3 +22,10 @@
 	height: 100px;
 	width: 75%;
 }
+.quicktags-toolbar {
+	margin-bottom: 5px;
+	display: inline-block;
+	float: left;
+	background: #ffffff !important;
+	border-bottom: none !important;
+}
