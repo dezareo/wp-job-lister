@@ -33,7 +33,7 @@ function dez_meta_callback( $post ) {
                 <label for="date-listed" class="dez-row-title">Date Listed</label>
 			</div>
 			<div class="meta-td">
-				<input type="text" name="date_listed" id="date-listed" value="<?php if ( ! empty ($dez_stored_meta['date_listed'] ) ) echo esc_attr( $dez_stored_meta['date_listed'] [0] ); ?>" />
+				<input type="text" name="date_listed" class="dez-row-content datepicker" id="date-listed datepicker" value="<?php if ( ! empty ($dez_stored_meta['date_listed'] ) ) echo esc_attr( $dez_stored_meta['date_listed'] [0] ); ?>" />
 			</div>
 		</div>
 		<div class="meta-row">
@@ -41,7 +41,7 @@ function dez_meta_callback( $post ) {
                 <label for="application_deadline" class="dez-row-title">Application Deadline</label>
 			</div>
 			<div class="meta-td">
-				<input type="text" name="application_deadline" id="application-deadline" value="<?php if ( ! empty ($dez_stored_meta['application_deadline'] ) ) echo esc_attr( $dez_stored_meta['application_deadline'] [0] ); ?>" />
+				<input type="text" name="application_deadline" class="dez-row-content datepicker" id="application-deadline" value="<?php if ( ! empty ($dez_stored_meta['application_deadline'] ) ) echo esc_attr( $dez_stored_meta['application_deadline'] [0] ); ?>" />
 			</div>
 		</div>
 	</div>
