@@ -30,3 +30,16 @@ function dez_admin_enqueue_scripts() {
 
 }
 add_action('admin_enqueue_scripts', 'dez_admin_enqueue_scripts');
+
+function dez_add_submenu_page() {
+
+	add_submenu_page(
+		'edit.php?post_type=job',
+		'Reorder Jobs',
+		'Reorder Jobs',
+		'manage_options',
+		'reorder_jobs',
+		'reorder_admin_jobs_callback'
+	);
+}
+add_action('admin_menu', 'dez_add_submenu_page' );
