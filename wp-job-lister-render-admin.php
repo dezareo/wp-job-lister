@@ -1,6 +1,8 @@
 <?php
 
 function reorder_admin_jobs_callback() {
+
+	
 	
 	$args = array(
 		'post_type' 			=> 'job',
@@ -27,7 +29,7 @@ function reorder_admin_jobs_callback() {
 			<p><?php _e('<strong>Note:</strong> this only affects the jobs listed using the shortcode functions!'); ?></p>
 			<ul id="custom-type-list">
 				<?php while( $job_listing->have_posts() ) : $job_listing->the_post(); ?>
-					<li id="<?php the_id(); ?>"><?php the_title(); ?></li>
+					<li id="<?php esc_attr( the_id() ); ?>"><?php esc_html( the_title() ); ?></li>
 				<?php endwhile; ?>
 			</ul>
 			<?php else: ?>
@@ -36,5 +38,5 @@ function reorder_admin_jobs_callback() {
 	</div>
 
 	<?php
-
+    
 }
