@@ -4,7 +4,7 @@ function dez_add_custom_metabox() {
 
 	add_meta_box(
 		'dez_meta',
-		'Job Lister',
+		__('Job Lister'),
 		'dez_meta_callback',
 		'job',
 		'normal',
@@ -22,7 +22,7 @@ function dez_meta_callback( $post ) {
 	<div>
 		<div class="meta-row">
 			<div class="meta-th">
-                <label for="job-id" class="dez-row-title">Job ID</label>
+                <label for="job-id" class="dez-row-title"><?php _e('Job Id', 'wp-job-lister'); ?></label>
 			</div>
 			<div class="meta-td">
 			<input type="text" name="job_id" id="job-id" value="<?php if ( ! empty ($dez_stored_meta['job_id'] ) ) echo esc_attr( $dez_stored_meta['job_id'] [0] ); ?>" />
@@ -30,7 +30,7 @@ function dez_meta_callback( $post ) {
 		</div>
 		<div class="meta-row">
 			<div class="meta-th">
-                <label for="date-listed" class="dez-row-title">Date Listed</label>
+                <label for="date-listed" class="dez-row-title"><?php _e('Date Listed', 'wp-job-lister'); ?></label>
 			</div>
 			<div class="meta-td">
 				<input type="text" name="date_listed" class="dez-row-content datepicker" id="date-listed datepicker" value="<?php if ( ! empty ($dez_stored_meta['date_listed'] ) ) echo esc_attr( $dez_stored_meta['date_listed'] [0] ); ?>" />
